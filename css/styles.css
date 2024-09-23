@@ -1,0 +1,62 @@
+
+header{
+    display: flex;
+    justify-content: space-around;
+    background-color: #333; 
+
+}
+nav {
+    margin-top: 20px;
+    height: 7vh;
+    border-radius: 9px;
+}
+
+nav ul {
+    list-style-type: none; 
+    padding: 0; 
+    margin: 0; 
+    display: flex; 
+}
+
+nav li {
+    margin: 0 15px; 
+}
+
+nav a {
+    color: white; 
+    text-decoration: none; 
+    padding: 5px 10px;
+    transition: background-color 0.3s; 
+}
+
+nav a:hover {
+    background-color: #555; 
+    transform: scale(5);
+}
+
+#signUp{    
+    border-radius: 10%;
+    border: 1px solid honeydew;
+}
+.btns-container{
+    font-size: 1.7rem;
+    position: relative;
+    top: 15px;
+    color: #fff;
+    opacity:0.7 ;
+}
+
+@media screen and (min-width:650px) {
+    .btns-container{
+        display: none;
+    } 
+}
+
+@media screen and (max-width:655px) {
+    #login{
+        display: none;
+    }
+    .btns-container{
+        display: block;
+    }
+}
