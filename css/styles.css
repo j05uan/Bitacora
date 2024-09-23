@@ -25,7 +25,7 @@ nav li {
 nav a {
     color: white; 
     text-decoration: none; 
-    padding: 5px 10px;
+    padding: 5px;
     transition: background-color 0.3s; 
 }
 
@@ -41,7 +41,8 @@ nav a:hover {
 .btns-container{
     font-size: 1.7rem;
     position: relative;
-    top: 15px;
+    top: 20px;
+    left: -14px;
     color: #fff;
     opacity:0.7 ;
 }
@@ -56,7 +57,18 @@ nav a:hover {
     #login{
         display: none;
     }
-    .btns-container{
+    #listarnav{
         display: block;
+        font-size: .8em;
+
+    }
+    #ocultar{
+        display: none;
+        font-size: .8em;
+
+    }
+    nav a{
+        padding: 0;
+        font-size: .8em;
     }
 }
