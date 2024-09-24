@@ -1,0 +1,95 @@
+ul li ul {
+    display: none;
+   
+}
+
+#invisiblelis{
+    display: none;
+}
+.show {
+    display: block;
+}
+ul li:hover > ul {
+    display: block;
+   
+}
+
+header{
+    display: flex;
+    width: 1500px;
+    justify-content: space-between;
+    overflow: hidden;
+    align-items: center;
+    height: 80px;
+    margin: 10px;
+    border-bottom: 2px solid black;
+}
+
+header nav ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    width: 120%;
+}
+header nav ul a{
+    text-decoration: none;
+
+}
+#profileUser{
+    display: none;
+}
+
+#profile {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-right: 50px;
+    align-items: center;
+    justify-content: center;
+    padding-right: 0px;
+}
+
+#profile img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+}
+
+#profileUser h1 {
+    font-size: 1.8em;
+    margin: 0;
+}
+
+#profileUser h3 {
+    margin: 5px 0;
+    font-weight: 600;
+    color: #333;
+}
+
+#profileUser p {
+    color: #777;
+    font-size: 1em;
+}
+#bodyHome{
+    display: grid;
+    grid-template-columns: 20% auto;
+}
+#tools{
+    border-right: 2px solid black;
+    display: grid;
+    place-items: center;
+}
+#tools ul li{
+    list-style: none;
+}
+#tools ul a{
+    text-decoration: none;
+}
+#home{
+    display: grid;
+    place-content: center;
+}
