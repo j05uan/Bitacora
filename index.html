@@ -10,7 +10,7 @@
 <body>
     <section>
         <header>
-            <div id="logo"></div>
+            <div class="logo"></div>
             <nav>
                 <ul>
                     <li><a href="#home">Home</a></li>
@@ -21,21 +21,46 @@
             </nav>         
             <nav id="login">
                 <ul >
-                    <li><a href="#">Sign in</a></li>
+                    <li><a href="#sectionLogin" id="signIn">Sign in</a></li>
                     <li><a id="signUp" href="#">Sign up</a></li>
                 </ul>
                 
             </nav>   
+            <!-- Manejo del nav respnsive -->
             <div  class="btns-container">
                 <i id="listarnav" class="bi bi-list"></i>
                 <i id="ocultar" class="bi bi-backspace"></i>
             </div>
         </header>
-        <section class="section login">
-            
+        <!-- Sign in, esta oculto, se debe dar click en la opcion de Sign id en el nava para que aparezca. -->
+        <section id="sectionLogin">
+            <div class="logoLogin"></div>
+            <h1>Sign in to Bitacora</h1>
+            <div id="cotainerLogin">
+
+                <form data-turbo="false" action="/session" accept-charset="UTF-8" method="post" class="login-form">
+                    <input type="hidden" data-csrf="true" name="authenticity_token" value="BcFp5P/fwxsA0P1tQXApcvbPto34FwHcRfGXs1gNR1smdGq1KAet45wjnPGSGBgqayp75kitiujwAOmFDYyRw==">
+                    <input type="hidden" name="add_account" id="add_account" autocomplete="off" class="form-control">
+                    
+                    <label for="login_field">Username or email address</label>
+                    <input 
+                    placeholder="Enter your username" type="text" name="login" id="login_field" class="form-control input-block js-login-field" autocapitalize="off" autocorrect="off" autocomplete="username" autofocus="autofocus" required="required">
+                    
+                    <div class="position-relative">
+                        <label for="password">Password</label>
+                        <input 
+                        placeholder="Enter your password" type="password" name="password" id="password" class="form-control input-block js-password-field" autocomplete="current-password" required="required">
+                        <a class="forgot-password" href="/password-reset">Forgot password?</a>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Sign in</button>
+                </form>
+                
+            </div>
         </section>
     </section>
     
-        
+    
+    <script src="./apps/app.js"></script>
 </body>
 </html>
