@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
+
+</head>
+<body>
+    <header >
+        <div id="logo"></div>
+        <nav>
+            <ul>
+                <a  id="Access" href="">Access management</a>
+                <li>
+                    <ul id="invisiblelis">
+                        <li><a href="">Users</a></li>
+                        <li><a href="">Teams</a></li>
+                        <li><a href="">Projects</a></li>
+                        <li><a href="">Roles</a></li>
+                        <li><a href="">Account setup</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Activitis</a></li>
+                <li><a href="">Departments</a></li>
+                <li><a href="">Log Out</a></li>
+            </ul>
+        </nav>
+        <div id="profile">
+            <img src="./descarga.png" alt="foto del usuario">
+            <div id="profileUser">
+                <h1>Bienvenido</h1>
+                <h3>[[${user.getFullname()}]]</h3>
+                <p>[[${user.getEmail()}]]</p>
+            </div>
+        </div>
+    </header>
+    <section id="bodyHome">
+        <section id="tools">
+            <ul>
+                <li>
+                    <a href="">Home</a>
+                </li>
+                <li>
+                    <a href="">Projects</a>
+                </li>
+                
+            </ul>
+        </section>
+        <section id="home">
+            <div id="timeMessage" class="message"></div>
+        </section>
+    </section>
+    <script src="./apps/admin.js"></script>
+</body>
+</html>
