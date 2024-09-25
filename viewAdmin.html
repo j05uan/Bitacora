@@ -32,7 +32,7 @@
             <img src="./descarga.png" alt="foto del usuario">
             <div id="profileUser">
                 <h1>Bienvenido</h1>
-                <h3>[[${user.getFullname()}]]</h3>
+                <h3 id="username">[[${user.getFullname()}]]</h3>
                 <p>[[${user.getEmail()}]]</p>
             </div>
         </div>
@@ -51,8 +51,138 @@
         </section>
         <section id="home">
             <div id="timeMessage" class="message"></div>
+            <aside id="toolsHome">
+                <div class="star" id="opCrudActivities">
+                    <a href="">Activitis</a>
+                </div>
+                <div class="star" id="opCrudProyectos">
+                    <a href="">Projects</a>
+                </div>
+                <div class="star">
+                    <a href="">Teams</a>
+                </div>
+                <div class="star">
+                    <a href="">Departments</a>
+                </div>
+                <div class="star">
+                    <a href="">Authentication</a>
+                </div>
+                <div class="star">
+                    <a href="">History</a>
+                </div>
+                <div class="star">
+                    <a href="">Statistics</a>
+                </div>
+                <div class="star"></div>
+            </aside>
         </section>
     </section>
+    <section class="crud" id="crudActivities">
+        <form id="crudOptionsForm">
+            <h1>Selecciona una opción</h1>
+            <button type="button" id="createActivityBtn">Crear Actividad</button>
+            <button type="button" id="readActivitiesBtn">Leer Actividades</button>
+            <button type="button" id="updateActivityBtn">Actualizar Actividad</button>
+            <button type="button" id="deleteActivityBtn">Eliminar Actividad</button>
+        </form>
+    
+        <div id="activityForm" style="display:none;">
+            <h2 id="formTitle">Crear Actividad</h2>
+            <form id="activityFormElement">
+                <input type="hidden" id="activityId" value="">
+                <label for="activityName">Nombre de la Actividad:</label>
+                <input type="text" id="activityName" required>
+                
+                <label for="description">Descripción:</label>
+                <textarea id="description" required></textarea>
+                
+                <label for="projectId">ID del Proyecto:</label>
+                <input type="number" id="projectId" required>
+                
+                <label for="activityTypeId">ID del Tipo de Actividad:</label>
+                <input type="number" id="activityTypeId" required>
+                
+                <label for="activityStatusId">ID del Estado de Actividad:</label>
+                <input type="number" id="activityStatusId" required>
+                
+                <label for="priorityId">ID de Prioridad:</label>
+                <input type="number" id="priorityId" required>
+                
+                <label for="createdByUserId">ID del Usuario Creador:</label>
+                <input type="number" id="createdByUserId" required>
+                
+                <button type="submit">Guardar Actividad</button>
+                <button type="button" id="cancelBtn">Cancelar</button>
+            </form>
+        </div>
+    
+        <div id="activityList" style="display:none;"></div>
+    </section>
+    <section class="crud" id="crudDepartments">
+        <form id="crudOptionsFormDepartments">
+        <h1>Selecciona una opción para Departamentos</h1>
+            <button type="button" id="createDepartmentBtn">Crear Departamento</button>
+            <button type="button" id="readDepartmentsBtn">Leer Departamentos</button>
+            <button type="button" id="updateDepartmentBtn">Actualizar Departamento</button>
+            <button type="button" id="deleteDepartmentBtn">Eliminar Departamento</button>
+        </form>
+    
+        <div id="departmentForm" style="display:none;">
+            <h2 id="formTitleDepartment">Crear Departamento</h2>
+            <form id="departmentFormElement">
+                <input type="hidden" id="departmentId" value="">
+                <label for="departmentName">Nombre del Departamento:</label>
+                <input type="text" id="departmentName" required>
+                
+                <label for="description">Descripción:</label>
+                <textarea id="descriptionDepartment" required></textarea>
+                
+                <button type="submit">Guardar Departamento</button>
+                <button type="button" id="cancelDepartmentBtn">Cancelar</button>
+            </form>
+        </div>
+    
+        <div id="departmentList" style="display:none;"></div>
+    </section>
+    <section class="crud" id="crudProjects">
+        <form id="crudOptionsFormProjects">
+        <h1>Selecciona una opción para Proyectos</h1>
+
+            <button type="button" id="createProjectBtn">Crear Proyecto</button>
+            <button type="button" id="readProjectsBtn">Leer Proyectos</button>
+            <button type="button" id="updateProjectBtn">Actualizar Proyecto</button>
+            <button type="button" id="deleteProjectBtn">Eliminar Proyecto</button>
+        </form>
+    
+        <div id="projectForm" style="display:none;">
+            <h2 id="formTitleProject">Crear Proyecto</h2>
+            <form id="projectFormElement">
+                <input type="hidden" id="projectId" value="">
+                <label for="projectName">Nombre del Proyecto:</label>
+                <input type="text" id="projectName" required>
+                
+                <label for="description">Descripción:</label>
+                <textarea id="descriptionProject" required></textarea>
+                
+                <label for="startDate">Fecha de Inicio:</label>
+                <input type="date" id="startDate" required>
+                
+                <label for="endDate">Fecha de Fin:</label>
+                <input type="date" id="endDate" required>
+                
+                <label for="departmentId">ID del Departamento:</label>
+                <input type="number" id="departmentId" required>
+                
+                <button type="submit">Guardar Proyecto</button>
+                <button type="button" id="cancelProjectBtn">Cancelar</button>
+            </form>
+        </div>
+    
+        <div id="projectList" style="display:none;"></div>
+    </section>
+    
+    
+    
     <script src="./apps/admin.js"></script>
 </body>
 </html>

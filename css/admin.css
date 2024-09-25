@@ -1,22 +1,23 @@
 ul li ul {
-    display: none;
-   
+    display: block;
+
 }
 
 #invisiblelis{
     display: none;
+
 }
 .show {
     display: block;
 }
 ul li:hover > ul {
     display: block;
-   
+
 }
 
 header{
     display: flex;
-    width: 1500px;
+    /* width: 1500px; */
     justify-content: space-between;
     overflow: hidden;
     align-items: center;
@@ -77,19 +78,78 @@ header nav ul a{
 #bodyHome{
     display: grid;
     grid-template-columns: 20% auto;
+    min-height: 77vh;
 }
 #tools{
     border-right: 2px solid black;
-    display: grid;
-    place-items: center;
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    /* justify-content: space-between; */
+    /* padding-left: 30px; */
+}
+#tools ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding: 0;
+    align-items: center;
+    flex-direction: column;
 }
 #tools ul li{
     list-style: none;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
 }
 #tools ul a{
     text-decoration: none;
 }
 #home{
     display: grid;
-    place-content: center;
+    grid-template-rows: 10% auto;
+    padding: 10px;
+}
+#timeMessage{
+    display: grid;
+    place-items: center;
+}
+#toolsHome{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+.star{
+    border: 1px solid rgb(194, 164, 221);
+    margin: 2px;
+    display: grid;
+    place-items: center;
+}
+.star a{
+    text-decoration: none;
+    font-size: 1.6em;
+}
+.crud{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 200px;
+    left: 700px;
+    padding: 20px;
+    justify-content: space-around;
+    border: 2px solid seagreen;
+    z-index: 200;
+    background-color: #777;
+}
+.crud form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 1em;
+}
+#crudDepartments{
+    display: none;
+}
+#crudProjects{
+    display: none;
 }
